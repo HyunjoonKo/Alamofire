@@ -89,11 +89,11 @@ To integrate Alamofire into your Xcode project using CocoaPods, specify it in yo
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
+platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'Alamofire', '~> 4.0'
+    pod 'Alamofire', :git => 'https://github.com/HyunjoonKo/Alamofire.git', :branch => 'dev/support_iOS_8'
 end
 ```
 
@@ -102,25 +102,6 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "Alamofire/Alamofire" ~> 4.0
-```
-
-Run `carthage update` to build the framework and drag the built `Alamofire.framework` into your Xcode project.
 
 ### Manually
 
@@ -137,7 +118,7 @@ $ git init
 - Add Alamofire as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/Alamofire/Alamofire.git
+$ git submodule add https://github.com/HyunjoonKo/Alamofire.git
 ```
 
 - Open the new `Alamofire` folder, and drag the `Alamofire.xcodeproj` into the Project Navigator of your application's Xcode project.
